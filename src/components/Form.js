@@ -16,7 +16,7 @@ export default function Form({ onSubmit }) {
         onChange={(event) => setOption(event.target.value)}
         placeholder="new option"
       />
-      <button>add</button>
+      <button type="submit">add</button>
     </form>
   );
 }
