@@ -22,12 +22,14 @@ function App() {
       isOk: false,
     };
     setOptions([...options, newOptionObject]);
+    localStorage.setItem("to-do", JSON.stringify(newOptionObject));
   }
 
   function deleteOption(id) {
     console.log(id);
     const updatedOptions = options.filter((option) => !(option.id === id));
     setOptions(updatedOptions);
+    localStorage.setItem("to-do", JSON.stringify(updatedOptions));
   }
 
   function updateOption(id, newIsOk) {
@@ -42,6 +44,7 @@ function App() {
       }
     });
     setOptions(updatedOptions);
+    localStorage.setItem("to-do", JSON.stringify(updatedOptions));
   }
 
   return (
